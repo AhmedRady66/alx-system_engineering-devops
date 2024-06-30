@@ -2,8 +2,8 @@
 # Client configuration file
 HOST *
     SendEnv LANG LC_*
-    HashKnownHosts yes
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials no
+    HashKnownHosts yes
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
