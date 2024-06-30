@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Client configuration file
+
+ssh-copy-id ubuntu@34.203.29.204
+ssh -v ubuntu@34.203.29.204
