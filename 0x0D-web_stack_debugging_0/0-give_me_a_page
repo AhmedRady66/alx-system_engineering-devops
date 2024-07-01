@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# starting my Docker container
+
+sudo service apache2 start
