@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on your lb-01 server.
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+echo -e "ENABLED=1\n" | sudo tee -a /etc/default/haproxy
+
+cat <<EOT | sudo tee -a /etc/haproxy/haproxy.cfg
+frontend aborady.tech
+        timeout client 30000
+        bind 0:80
+        default_backend aborady.tech_backend
+
+backend aborady.tech_backend
+        timeout connect 30000
+        timeout server 30000
+        balance roundrobin
+        server 431861-web-01 54.146.82.115:80 check
+        server 431861-web-02 54.87.179.88:80 check
+EOT
+
+sudo service haproxy restart
