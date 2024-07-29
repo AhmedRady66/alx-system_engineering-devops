@@ -12,11 +12,14 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
 
     emp_id = sys.argv[1]
+
     user_response = requests.get(url + "users/{}".format(emp_id))
     user = user_response.json()
-    params = {"user_id": emp_id}
+
+    params = {"userId": emp_id}
     todos_response = requests.get(url + "todos", params=params)
     todos = todos_response.json()
+
     completed = []
 
     for i in todos:
