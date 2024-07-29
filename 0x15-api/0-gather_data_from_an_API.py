@@ -2,10 +2,8 @@
 """Script that uses https://jsonplaceholder.typicode.com/ 
 to return TODO list progress for a given employee ID."""
 
-
 import requests
 import sys
-
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
