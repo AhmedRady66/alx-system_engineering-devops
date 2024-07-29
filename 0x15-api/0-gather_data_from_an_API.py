@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Write a Python script that, using this https://jsonplaceholder.typicode.com/
-for a given employee ID
-returns information about his/her TODO list progress."""
+"""Script that uses https://jsonplaceholder.typicode.com/ 
+to return TODO list progress for a given employee ID."""
 
 
 import requests
