@@ -21,9 +21,9 @@ if __name__ == "__main__":
 
     for i in todos:
         task_info = {
+            "username": username,
             "task": i.get("title"),
             "completed": i.get("completed"),
-            "username": username
         }
         data_export[user_id].append(task_info)
 
