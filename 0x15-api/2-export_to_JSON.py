@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""extend your Python script to export data in the JSON format."""
-
+"""Script to export data in JSON format"""
 
 import json
 import requests
 import sys
-
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
@@ -15,7 +13,7 @@ if __name__ == "__main__":
     username = user.get("username")
 
     params = {"userId": user_id}
-    todos = requests.get(url + "todos", params).json()
+    todos = requests.get(url + "todos", params=params).json()
 
     data_export = {
         user_id: [
